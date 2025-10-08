@@ -1,5 +1,3 @@
-#!/bin/bash
-
 if [[ $EUID -ne 0 ]]; then
   echo "Please run as root or use sudo"
   exit 1
@@ -17,4 +15,3 @@ echo "Selected interface: $INTERFACE"
 
 
 tcpdump -i "$INTERFACE" -n -v 
-
