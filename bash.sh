@@ -2,7 +2,7 @@ if [[ $EUID -ne 0 ]]; then
   echo "Please run as root or use sudo"
   exit 1
 fi
-
+ 
 
 INTERFACE=$(ip -o link show up | awk -F': ' '{print $2}' | grep -v lo | head -n 1)
 
